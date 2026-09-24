@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-family: Arial, sans-serif;
     padding: 2rem;
     background-color: #f4f4f4;
@@ -10,4 +11,25 @@
 
 h1 {
     color: orange;
+}
+button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    border : 0.1px solid rgb(173, 172, 172);
+}
+.reset-btn {
+    border: 0.1px solid rgb(255, 67, 67);
+    background-color: rgb(255, 92, 92);
+    color: white;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
 }

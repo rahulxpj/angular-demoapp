@@ -1,16 +1,35 @@
 import { Component, signal } from '@angular/core';
-import { Home } from './home/home';
-import { Header } from './header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [Home,Header],
+  imports: [],
   styleUrl: './app.css',
   templateUrl: './app.html',
-  // template: '<h1>{{title()}}</h1><h2>{{name}}</h2>', this was inline template, but now we are using external template file
 })
 export class App {
   protected readonly title = signal('Demo App');
-  name = 'Rahul';
+  name  = '';
+  displayInput = '';
+  email = '';
+  displayEmail = '';
+
+  getValue(event:Event) {
+    this.name = (event.target as HTMLInputElement).value;
+  }
+
+  getInputValue(){
+    this.displayInput = this.name;
+  }
+
+  setInputValue(){
+    this.name = 'Rahul';
+  }
+
+  getEmail(val:string){
+    this.displayEmail = val;
+  }
+  setEmail(){
+    this.email = 'rahul@example.com'
+  }
 }
   

@@ -1,7 +1,19 @@
 <main class = "main">
   <h1>{{title()}}</h1>
-  <h2>{{name}}</h2>
-  <h2>ToDo List</h2>
-  <app-home></app-home>
-  <app-header></app-header>
+
+  <h2>Confirm : {{displayInput}}</h2>
+
+  <input type="text" (input)="getValue($event)" value="{{name}}" placeholder="Enter Username">
+  <button (click)="getInputValue()">Get Value</button>
+  <button (click)="setInputValue()">Set Input</button>
+
+  <br>
+
+  <h2>Confirm Email : {{displayEmail}}</h2>
+
+  <input type="text" value="{{email}}" placeholder="Enter email" #emailField>
+  <button (click)="getEmail(emailField.value)">Get Email</button>
+  <button (click)="setEmail()">Set Eail</button>
+
+
 </main>
