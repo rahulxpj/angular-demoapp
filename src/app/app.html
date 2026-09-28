@@ -1,19 +1,5 @@
-<main class = "main">
-  <h1>{{title()}}</h1>
+<h1>Signals</h1>
 
-  <h2>Confirm : {{displayInput}}</h2>
+<h2>Count: {{count()}}</h2>
 
-  <input type="text" (input)="getValue($event)" value="{{name}}" placeholder="Enter Username">
-  <button (click)="getInputValue()">Get Value</button>
-  <button (click)="setInputValue()">Set Input</button>
-
-  <br>
-
-  <h2>Confirm Email : {{displayEmail}}</h2>
-
-  <input type="text" value="{{email}}" placeholder="Enter email" #emailField>
-  <button (click)="getEmail(emailField.value)">Get Email</button>
-  <button (click)="setEmail()">Set Eail</button>
-
-
-</main>
+<button (click)="count.set(count() + 1)">Increment</button>
